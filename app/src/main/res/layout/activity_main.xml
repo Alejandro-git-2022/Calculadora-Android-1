@@ -77,8 +77,8 @@
                 android:textColor="@color/white"
                 android:layout_margin="12dp"
                 android:backgroundTint="#A1A1A1"
-                android:id="@+id/button_close_bracket"
-                android:text="FA" />
+                android:id="@+id/button_factorial"
+                android:text="!" />
             <com.google.android.material.button.MaterialButton
                 android:layout_width="72dp"
                 android:layout_height="72dp"

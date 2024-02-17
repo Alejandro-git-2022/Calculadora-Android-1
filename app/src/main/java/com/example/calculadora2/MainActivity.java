@@ -12,7 +12,7 @@ import org.mozilla.javascript.Scriptable;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView resultTv, solutionTv;
-    MaterialButton buttonC, buttonBrackClose;
+    MaterialButton buttonC, buttonFactorial; // Reemplazamos buttonBrackClose por buttonFactorial
     MaterialButton buttonDivide, buttonMultiply, buttonPlus, buttonMinus, buttonEquals;
     MaterialButton button0, button1, button2, button3, button4, button5, button6, button7, button8, button9;
     MaterialButton buttonAC, buttonDot, buttonFibonacci;
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         assignId(buttonC, R.id.button_c);
 
-        assignId(buttonBrackClose, R.id.button_close_bracket);
+        assignId(buttonFactorial, R.id.button_factorial); // Reemplazamos el ID de buttonBrackClose por el de buttonFactorial
         assignId(buttonDivide, R.id.button_divide);
         assignId(buttonMultiply, R.id.button_multiply);
         assignId(buttonPlus, R.id.button_plus);
@@ -72,6 +72,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (buttonText.equals("F")) {
             openFibonacciActivity();
             return;
+        } else if (buttonText.equals("!")) { // Agregamos la lógica para el botón Factorial
+            openFactorialActivity();
+            return;
         } else {
             dataToCalculate = dataToCalculate + buttonText;
         }
@@ -101,6 +104,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void openFibonacciActivity() {
         Intent intent = new Intent(this, FibonacciActivity.class);
+        startActivity(intent);
+    }
+
+    private void openFactorialActivity() {
+        Intent intent = new Intent(this, FactorialActivity.class);
         startActivity(intent);
     }
 }
