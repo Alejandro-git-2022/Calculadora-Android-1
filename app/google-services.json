@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "877659723473",
+    "project_id": "calculadora2-806e9",
+    "storage_bucket": "calculadora2-806e9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:877659723473:android:a23b8e498be58723b997f0",
+        "android_client_info": {
+          "package_name": "com.example.calculadora2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl9on3u3DiJWLKtq59k3BMcquIBdgT3yw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

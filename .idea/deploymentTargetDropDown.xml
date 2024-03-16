@@ -2,6 +2,9 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
+      <entry key="Calculadora_Fibonacci">
+        <State />
+      </entry>
       <entry key="FactorialActivity">
         <State />
       </entry>
@@ -29,9 +32,6 @@
           </targetSelectedWithDropDown>
           <timeTargetWasSelectedWithDropDown value="2024-02-17T00:34:34.763149500Z" />
         </State>
-      </entry>
-      <entry key="calculadora_Fibonacci()">
-        <State />
       </entry>
       <entry key="testCalculadoraFibonacciFactorial()">
         <State />
