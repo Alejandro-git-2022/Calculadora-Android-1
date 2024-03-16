@@ -1,13 +1,16 @@
-name: Build and Test
+name: Java CI
 
 on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
-  build-and-test:
-    name: Build and Test
+  build:
+
     runs-on: ubuntu-latest
 
     steps:
@@ -18,9 +21,15 @@ jobs:
       uses: actions/setup-java@v2
       with:
         java-version: 17
+        distribution: 'adopt'
+        java-package: jdk
+        architecture: x64
+        check-latest: false
+        server-id: github
+        server-username: ${{ github.actor }}
+        server-password: ${{ secrets.GITHUB_TOKEN }}
+        overwrite-settings: true
+        job-status: success
 
-    - name: Grant execute permission to gradlew
-      run: chmod +x gradlew
-
-    - name: Build and Test
+    - name: Build and Test with Gradle
       run: ./gradlew build test
