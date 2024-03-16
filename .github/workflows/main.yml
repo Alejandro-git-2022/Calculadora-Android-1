@@ -1,4 +1,4 @@
-name: Android Testing
+name: Java CI
 
 on:
   push:
@@ -10,7 +10,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -21,14 +20,13 @@ jobs:
       uses: actions/setup-java@v2
       with:
         java-version: 17
-
-    - name: Cache Gradle dependencies
-      uses: actions/cache@v2
-      with:
-        path: ~/.gradle/caches
-        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
-        restore-keys: |
-          ${{ runner.os }}-gradle-
+        distribution: 'adopt'
+        architecture: x64
+        server-id: github
+        server-username: ${{ github.actor }}
+        server-password: ${{ secrets.GITHUB_TOKEN }}
+        overwrite-settings: true
+        job-status: success
 
     - name: Build and Test with Gradle
       run: ./gradlew build test
